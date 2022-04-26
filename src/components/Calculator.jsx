@@ -5,7 +5,6 @@ import "./Calculator.css";
 export default (props) => {
   const [num, setNum] = useState("");
   const [oldNum, setOldNum] = useState();
-  const [newNum, setNewNum] = useState();
   const [operator, setOperator] = useState();
 
   function btnNum(e) {
@@ -28,8 +27,6 @@ export default (props) => {
   }
 
   function calculate() {
-    console.log(oldNum);
-    console.log(num);
     if (operator === "+") {
       setNum(parseFloat(oldNum) + parseFloat(num));
     } else if (operator === "-") {
@@ -45,7 +42,6 @@ export default (props) => {
     var operatorView = e.target.value;
     setOperator(operatorView);
     setOldNum(num);
-    setNewNum(oldNum);
     setNum("");
   }
 
