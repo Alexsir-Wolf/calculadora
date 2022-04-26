@@ -1,9 +1,11 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import "./Calculator.css";
 
-export default function Calculator() {
+export default (props) => {
   const [num, setNum] = useState("");
   const [oldNum, setOldNum] = useState();
+  const [newNum, setNewNum] = useState();
   const [operator, setOperator] = useState();
 
   function btnNum(e) {
@@ -21,11 +23,13 @@ export default function Calculator() {
   }
 
   function signSwap() {
-    //use Math.abs(num) lib JS
+    //Math.abs(num) lib JS
     num > 0 ? setNum(-num) : setNum(Math.abs(num));
   }
 
   function calculate() {
+    console.log(oldNum);
+    console.log(num);
     if (operator === "+") {
       setNum(parseFloat(oldNum) + parseFloat(num));
     } else if (operator === "-") {
@@ -41,6 +45,7 @@ export default function Calculator() {
     var operatorView = e.target.value;
     setOperator(operatorView);
     setOldNum(num);
+    setNewNum(oldNum);
     setNum("");
   }
 
@@ -115,4 +120,4 @@ export default function Calculator() {
       </div>
     </div>
   );
-}
+};

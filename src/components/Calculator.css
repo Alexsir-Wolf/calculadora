@@ -55,15 +55,19 @@ button:hover {
 }
 
 .view h1 {
-  margin: 0 0.3em;
-  width: 1.5em;
-  height: 1.4em;
-  text-align: center;
+  margin: 0 0.2em;
+  width: 6em;
+  height: 1.2em;
+  display: flex;
+  justify-content: right;
+  overflow: hidden;
 }
 
 .view h5 {
-  margin: 0.5em 0.8em;
-  width: 3em;
-  height: 0.5em;
-  text-align: center;
+  margin: 0.2em 0.8em;
+  width: 14em;
+  height: 2em;
+  display: flex;
+  justify-content: right;
+  overflow: hidden;
 }
